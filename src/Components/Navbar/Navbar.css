@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Life+Savers:wght@400;700;800&display=swap');
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -6,6 +7,10 @@
     height: 60px;
     background-color: #fff; /* Adjust color as needed */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 195vh;
+    height: 40px;
+    z-index: 1000;
   }
   
   .navbar-left {
@@ -13,6 +18,10 @@
     align-items: center;
   }
   
+  .navbar-left a{
+    text-decoration: none;
+  }
+
   .navbar-right {
     display: flex;
     gap: 20px;
@@ -25,7 +34,7 @@
   }
   
   h1 {
-    font-family: serif;
+    font-family: Life Savers;
     font-size: 24px;
     color: black;
   }

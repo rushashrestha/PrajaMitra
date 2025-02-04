@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Life+Savers:wght@400;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap');
+#about {
+    scroll-margin-top: 100px; /* Prevent overlap with the navbar */
+    min-height: 100vh; /* Ensure visibility */
+    padding: 20px 0;
+    background-color: #f0f0f0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #about h1{
+    text-align: center;
+    font-size: 2rem;
+    font-family: Playfair Display;
+    font-weight: bold;
+  }
+  .mitra{
+    font-family: Life Savers;
+    font-weight: bold;
+  }
+  #about p{
+    font-family: 'El Messiri';
+  }
+
+  .about-section {
+    background-color: transparent;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    height: 45vh;
+    width: 45vh;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+.about-section:hover{
+    transform: scale(1.05);
+}
+
+
+.about-points{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+  .about-section h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    font-family: Playfair Display;
+  }
+  
+  .about-section p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  .about-bottom {
+    text-align: center;
+    max-width: 80%;
+    /* padding: 20px; */
+  }
+  
+  .about-bottom h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+    font-family: Playfair Display;
+  }
+  
+  .about-bottom p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.5;
+  }
+  
