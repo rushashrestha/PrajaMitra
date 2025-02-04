@@ -1,32 +1,39 @@
 import logo from "../../images/gov.png";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";  // Import Link
+import { Link } from "react-router-dom"; // Import Link
 import "./Navbar.css";
 
 const Navbar = () => {
   const navigate = useNavigate();
 
-  const handleScrollToServices = () => {
+  const handleScroll = (sectionId) => {
     if (window.location.pathname !== "/") {
-      navigate("/"); // Ensure we are on the home page first
+      navigate("/");
       setTimeout(() => {
-        document.getElementById("services").scrollIntoView({ behavior: "smooth" });
-      }, 500); // Delay to ensure home page loads first
+        document
+          .getElementById(sectionId)
+          ?.scrollIntoView({ behavior: "smooth" });
+      }, 500);
     } else {
-      document.getElementById("services").scrollIntoView({ behavior: "smooth" });
+      document
+        .getElementById(sectionId)
+        ?.scrollIntoView({ behavior: "smooth" });
     }
   };
   return (
     <nav className="navbar">
       <div className="navbar-left">
         <img src={logo} alt="Logo" className="logo" />
-        <h1>PROJECT</h1>
+        <a href="/"><h1>प्रजा MITRA</h1></a>
+        
       </div>
       <div className="navbar-right">
-      <button onClick={handleScrollToServices}>OUR SERVICES</button>
-        <Link to="/login"><button>LOGIN</button></Link>
-        <Link to="/about"><button>ABOUT US</button></Link>
+        <button onClick={() => handleScroll("services")}>OUR SERVICES</button>
+        <button onClick={() => handleScroll("about")}>ABOUT US</button>
+        <Link to="/login">
+          <button>LOGIN</button>
+        </Link>
       </div>
     </nav>
   );

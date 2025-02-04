@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Gotu&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 .hero {
     /* position: relative; Ensure it takes up space */
     height: 100vh; /* Full viewport height */
@@ -8,15 +8,25 @@
     justify-content: center;
     background: #f8f8f8;
     min-height: 100vh;
+    padding-top: 80px;
 }
 
 .heropara {
-    font-family: "Times New Roman", serif;
-    font-size: 50px;
-    text-align: center;
-    line-height: 1.4;
+    display: flex;
+    justify-content: flex-start; /* Align content to the left */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Adjust height if needed */
+   
     max-width: 60%;
     background: rgba(255, 255, 255, 0.7);
     padding: 10px;
     border-radius: 10px;
+    
+}
+
+.heropara p{
+    font-family: "Playfair Display";
+    font-size: 50px;
+    text-align: center;
+    line-height: 1.4;
 }
