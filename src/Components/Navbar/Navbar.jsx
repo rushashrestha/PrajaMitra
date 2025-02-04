@@ -21,7 +21,6 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-left">
         <img src={logo} alt="Logo" className="logo" />
-        <h1>Egovernance</h1>
       </div>
       <div className="navbar-right">
       <button onClick={handleScrollToServices}>OUR SERVICES</button>

@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.loginBox {
+    background-image: url(../../images/nepal.jpg);
+    display: flex;
+    background-size: cover;
+    background-repeat: none;
+    align-items: center;
+    margin: 40px;
+    height: 600px;
+    width: 1600px;
+}
+
+
+
+.details {
+    margin-top: 20px;
+    margin-left: 90px;
+    background-color: rgba(120, 218, 218, 0.592);
+    padding: 80px;
+    border-radius: 90px;
+    height: 300px;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.details input {
+    font-size: 15px;
+    background-color: rgba(55, 16, 16, 0.275);
+    padding: 5px;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: 5px solid black;
+    border-radius: 50px;
+    height: 20px;
+    width: 290px;
+}
+
+input::placeholder {
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    opacity: 1;
+    /* Ensures the placeholder is fully visible */
+}
+
+.btnLogin {
+    background-color: rgba(71, 50, 24, 0.275);
+    margin-top: 50px;
+    font-size: 19px;
+    width: 120px;
+}
