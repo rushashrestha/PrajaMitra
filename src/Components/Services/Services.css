@@ -1,0 +1,38 @@
+.services-container {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f8f8f8;
+    min-height: 100vh; 
+  }
+  
+  .services-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .services-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .service-card {
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(to top, #77b255, #d0f0ff);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Times New Roman", serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: scale(1.05);
+  }
+  

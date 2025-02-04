@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Gotu&display=swap");
+
+.hero {
+    /* position: relative; Ensure it takes up space */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f8f8;
+    min-height: 100vh;
+}
+
+.heropara {
+    font-family: "Times New Roman", serif;
+    font-size: 50px;
+    text-align: center;
+    line-height: 1.4;
+    max-width: 60%;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+}
