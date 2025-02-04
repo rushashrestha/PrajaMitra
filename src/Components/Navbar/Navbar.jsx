@@ -1,7 +1,8 @@
-import React from "react";
-import "./Navbar.css";
 import logo from "../../images/gov.png";
-
+import React from "react";
+import { Link } from "react-router-dom";
+ // Import Link
+import "./Navbar.css";
 
 const Navbar = () => {
   return (
@@ -11,10 +12,9 @@ const Navbar = () => {
         <h1>PROJECT</h1>
       </div>
       <div className="navbar-right">
-        <button>OUR SERVICES</button>
-        <button>ABOUT US</button>
-        <button>LOGIN</button>
-        
+        <Link to="/services"><button>OUR SERVICES</button></Link>
+        <Link to="/login"><button>LOGIN</button></Link>
+        <Link to="/about"><button>ABOUT US</button></Link>
       </div>
     </nav>
   );
