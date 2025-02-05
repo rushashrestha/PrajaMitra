@@ -73,3 +73,65 @@ input::placeholder {
     font-size: 19px;
     width: 120px;
 }
+
+@media (max-width: 1024px) {
+    .details {
+        margin-left: 100px;
+        padding: 60px;
+        width: 240px;
+        height: 280px;
+    }
+
+    .details input {
+        width: 260px;
+    }
+}
+
+@media (max-width: 768px) {
+    .loginBox {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 20px;
+    }
+
+    .details {
+        margin-left: 0;
+        padding: 50px;
+        width: 90%;
+        max-width: 280px;
+        height: auto;
+    }
+
+    .details input {
+        width: 100%;
+    }
+
+    .btnLogin {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .rem {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .details {
+        padding: 30px;
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .details input {
+        width: 100%;
+    }
+
+    .btnLogin {
+        width: 100%;
+        font-size: 17px;
+    }
+}

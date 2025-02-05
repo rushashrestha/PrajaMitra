@@ -69,3 +69,73 @@ input::placeholder {
     width: 120px;
 margin-left: 20vh;
 }
+
+@media (max-width: 1024px) {
+    .signinDet {
+        margin-left: 100px;
+        padding: 50px;
+        width: 380px;
+        height: 440px;
+    }
+
+    .signinDet input {
+        width: 360px;
+    }
+
+    .signinDet .name {
+        width: 380px;
+    }
+}
+
+@media (max-width: 768px) {
+    .signup {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 20px;
+    }
+
+    .signinDet {
+        margin-left: 0;
+        padding: 40px;
+        width: 90%;
+        max-width: 350px;
+        height: auto;
+    }
+
+    .signinDet input {
+        width: 100%;
+    }
+
+    .btnSign {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .signinDet {
+        padding: 30px;
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .signinDet input {
+        width: 100%;
+    }
+
+    .signinDet .name {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .gender {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btnSign {
+        width: 100%;
+        font-size: 17px;
+    }
+}
