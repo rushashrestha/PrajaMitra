@@ -63,3 +63,49 @@
     transform: scale(1.05);
   }
   
+  /* For tablets */
+@media (max-width: 1024px) {
+  .services-grid {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .service-card {
+    width: 200px;
+    height: 200px;
+  }
+
+  .services-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 768px) {
+  .services-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    width: 90%;
+    height: 200px;
+  }
+
+  .services-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* For small mobile devices */
+@media (max-width: 480px) {
+  .service-card {
+    width: 100%;
+    height: 150px;
+    font-size: 1rem;
+  }
+
+  .services-title {
+    font-size: 1.2rem;
+  }
+}

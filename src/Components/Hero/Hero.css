@@ -7,20 +7,18 @@
   align-items: center;
   justify-content: center;
   background: url("../../images/nepal-tibet.webp") no-repeat center center/cover;
-  min-height: 100vh;
-  padding-top: 80px;
+  padding: 0 20px;
+  position: relative;
 }
 
 .heropara {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
   max-width: 60%;
-  background: transparent;
-  
-  padding-right: 800px;
- 
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better text readability */
+  padding: 20px;
+  border-radius: 8px;
 }
 
 .heropara p {
@@ -29,4 +27,38 @@
   text-align: center;
   line-height: 1.4;
   color: #ffffff;
+}
+
+/* ============ Responsive Design ============ */
+
+/* For tablets */
+@media (max-width: 1024px) {
+  .heropara {
+    max-width: 80%;
+  }
+  .heropara p {
+    font-size: 40px;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 768px) {
+  .hero {
+    padding: 0 10px;
+  }
+  .heropara {
+    max-width: 100%;
+    padding: 10px;
+  }
+  .heropara p {
+    font-size: 30px;
+  }
+}
+
+/* For smaller mobile devices */
+@media (max-width: 480px) {
+  .heropara p {
+    font-size: 24px;
+    line-height: 1.2;
+  }
 }
