@@ -34,10 +34,10 @@ const Footer = () => {
                </div>
                 
             </ul>
-      <p className="footer-copyright">
+      <div className="footer-copyright">
         <hr/>
         COPYRIGHT © 2024 - ALL RIGHTS RESERVED.
-      </p>
+      </div>
     </footer>
   );
 };
