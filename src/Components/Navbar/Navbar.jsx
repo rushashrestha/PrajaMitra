@@ -1,7 +1,7 @@
 import logo from "../../images/gov.png";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom"; // Import Link
+import { Link } from "react-router-dom"; 
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -21,11 +21,12 @@ const Navbar = () => {
         ?.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   return (
     <nav className="navbar">
       <div className="navbar-left">
         <img src={logo} alt="Logo" className="logo" />
-        <a href="/">
+        <a href="/" className="navbar-brand">
           <h1>प्रजा MITRA</h1>
         </a>
       </div>

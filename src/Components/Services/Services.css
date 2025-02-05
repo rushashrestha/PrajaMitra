@@ -33,7 +33,32 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
   }
+
+  .service-card h3{
+    font-weight: bold;
+  }
+
+  .service-card:nth-child(1) {
+    background: url("../../images/road.webp") no-repeat center center/cover;
+    color: white; /* Ensures text is readable on the image */
+    font-family: 'Life Savers', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
   
+  .service-card:nth-child(2){
+    background: url("../../images/road.webp") no-repeat center center/cover;
+    color: white; /* Ensures text is readable on the image */
+    font-family: 'Life Savers', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .service-card:nth-child(3){
+    background: url("../../images/road.webp") no-repeat center center/cover;
+    color: white; /* Ensures text is readable on the image */
+    font-family: 'Life Savers', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
   .service-card:hover {
     transform: scale(1.05);
   }
