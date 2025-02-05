@@ -14,7 +14,7 @@ const GrievanceFiling = () => {
         <label htmlFor="Age">Age: <input type="number" id="age"/></label>
         </div>
         
-        <label htmlFor="MailingAddress">Mailing Address(include): <input type="text" id="mailingAddress"/></label>
+        <label htmlFor="MailingAddress">Mailing Address(include postal code): <input type="text" id="mailingAddress"/></label>
         <label htmlFor="gEmail">Email address: <input type="text" /></label>
 
         <label htmlFor="issues">Grievable Issue: <input type="text" id="issues" /></label>
