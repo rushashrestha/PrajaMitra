@@ -36,6 +36,13 @@
 
   .service-card h3{
     font-weight: bold;
+    text-decoration: none;
+    color: white;
+  }
+
+  .service-card :link{
+    text-decoration: none;
+    color: white;
   }
 
   .service-card:nth-child(1) {
@@ -62,6 +69,9 @@
   .service-card:hover {
     transform: scale(1.05);
   }
+
+
+
   
   /* For tablets */
 @media (max-width: 1024px) {
