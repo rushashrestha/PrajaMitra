@@ -6,7 +6,6 @@
 }
 .grievanceFiling h3{
     font-size: 30px;
-   
 }
 .form {
     padding: 20px;
@@ -16,7 +15,6 @@
     font-size:20px ;
     justify-content: space-between;
     margin-right:16px ;
-   
 }
 .form input{
     /* background-color: rgba(187, 234, 220, 0.226); */
@@ -31,13 +29,12 @@
 }
 #breif, #resolution{
     height: 200px;
-    width: 1400px;
+    width: 800px;
 }
 .btnSubmit{
     font-size: 20px;
  background-color: rgba(96, 89, 78, 0.7);
     height: 50px;
-    margin-left: 700px;
     width: 180px;
     align-items: center;
 }
