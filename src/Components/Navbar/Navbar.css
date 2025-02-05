@@ -9,7 +9,7 @@
   margin: 0 auto; /* Centers the navbar */
   padding: 10px 155px; /* Adjusted padding */
   background-color: #fff;
-  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
   left: 0;
