@@ -38,3 +38,73 @@
     width: 180px;
     align-items: center;
 }
+
+@media (max-width: 1024px) {
+    .grievanceFiling {
+        margin: 50px;
+    }
+
+    .form input, #breif, #resolution {
+        width: 100%;
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+    .grievanceFiling {
+        margin: 30px;
+    }
+
+    .grievanceFiling h3 {
+        font-size: 24px;
+    }
+
+    .form {
+        font-size: 18px;
+    }
+
+    .form input, #breif, #resolution {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .rga input {
+        width: 200px;
+    }
+
+    .btnSubmit {
+        width: 150px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grievanceFiling {
+        margin: 20px;
+    }
+
+    .grievanceFiling h3 {
+        font-size: 20px;
+    }
+
+    .form {
+        font-size: 16px;
+    }
+
+    .form input, #breif, #resolution {
+        width: 100%;
+        max-width: 100%;
+        font-size: 16px;
+    }
+
+    .rga input {
+        width: 100%;
+        max-width: 180px;
+    }
+
+    .btnSubmit {
+        width: 100%;
+        font-size: 16px;
+        height: 45px;
+    }
+}

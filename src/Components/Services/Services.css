@@ -53,7 +53,7 @@
   }
   
   .service-card:nth-child(2){
-    background: url("../../images/road.webp") no-repeat center center/cover;
+    background: url("../../images/kathmandu-city.webp") no-repeat center center/cover;
     color: white; /* Ensures text is readable on the image */
     font-family: 'Life Savers', cursive;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
