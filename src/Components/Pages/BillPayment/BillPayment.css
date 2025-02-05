@@ -105,3 +105,114 @@
     background-color: #218838;
   }
   
+
+  @media (max-width: 1024px) {
+    .bill-options {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .bill-card {
+        width: 180px;
+        padding: 15px;
+    }
+
+    .bill-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .bill-card button {
+        padding: 8px 12px;
+        font-size: 1rem;
+    }
+
+    .popup-content {
+        width: 280px;
+    }
+
+    .popup-content input, .popup-content select {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .bill-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bill-card {
+        width: 90%;
+        max-width: 250px;
+    }
+
+    .popup-content {
+        width: 250px;
+        padding: 15px;
+    }
+
+    .popup-content label {
+        font-size: 0.9rem;
+    }
+
+    .popup-content input, .popup-content select {
+        font-size: 0.9rem;
+    }
+
+    .proceed-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .bill-payment-container {
+        padding: 15px;
+        padding-bottom: 150px;
+    }
+
+    .bill-payment-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .bill-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bill-card {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .bill-card h3 {
+        font-size: 1rem;
+    }
+
+    .bill-card button {
+        font-size: 0.9rem;
+        padding: 7px 10px;
+    }
+
+    .popup-content {
+        width: 220px;
+        padding: 10px;
+    }
+
+    .popup-content label {
+        font-size: 0.85rem;
+    }
+
+    .popup-content input, .popup-content select {
+        font-size: 0.85rem;
+    }
+
+    .proceed-btn {
+        font-size: 0.9rem;
+    }
+
+    .close-icon {
+        font-size: 18px;
+        top: 8px;
+        right: 10px;
+    }
+}
