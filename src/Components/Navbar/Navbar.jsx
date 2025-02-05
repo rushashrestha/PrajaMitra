@@ -26,7 +26,6 @@ const Navbar = () => {
       <div className="navbar-left">
         <img src={logo} alt="Logo" className="logo" />
         <a href="/"><h1>प्रजा MITRA</h1></a>
-        
       </div>
       <div className="navbar-right">
         <button onClick={() => handleScroll("services")}>OUR SERVICES</button>

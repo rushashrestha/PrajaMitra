@@ -7,10 +7,10 @@
     height: 60px;
     background-color: #fff; /* Adjust color as needed */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: fixed;
+    position: relative;
     width: 195vh;
     height: 40px;
-    z-index: 1000;
+    z-index: 1;
   }
   
   .navbar-left {
@@ -59,3 +59,10 @@
     background: #ddd;
   }
   
+
+  @media (min-width:1200px) {
+   .navbar{
+    height: 80px;
+    width:1580px;
+   }
+  }

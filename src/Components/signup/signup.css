@@ -1,45 +1,31 @@
-*{
-    margin: 0;
-    padding: 0;
-    
-}
-
-.loginBox {
-    
+.signup {
+    margin-top: 100px;
+    z-index: -1;
     margin-top: 0px;
     background-image: url(../../images/nepal.jpg);
     display: flex;
+
     background-size: cover;
     background-repeat: none;
-    align-items: center;
+
     z-index: -1;
     height: 684px;
 }
 
-.signLink{
-    color: rgb(45, 104, 0);
-    text-decoration: underline;
-}
-.signLink:hover{
-  cursor: pointer;
-
-}
-
-
-.details {
-    margin-top: 20px;
+.signinDet {
+    margin-top: 90px;
     margin-left: 190px;
     background-color: rgba(165, 170, 170, 0.674);
     padding: 80px;
     border-radius: 90px;
-    height: 300px;
-    width: 260px;
+    height: 400px;
+    width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.details input {
+.signinDet input {
     font-size: 15px;
     background-color: rgba(55, 16, 16, 0.275);
     padding: 5px;
@@ -49,7 +35,13 @@
     border-bottom: 5px solid black;
     border-radius: 50px;
     height: 20px;
-    width: 290px;
+    width: 390px;
+}
+
+.signinDet .name {
+    display: flex;
+    gap: 5px;
+    width: 400px;
 }
 
 input::placeholder {
@@ -58,16 +50,8 @@ input::placeholder {
     opacity: 1;
     /* Ensures the placeholder is fully visible */
 }
-.rem input{
-    margin-left: 0px;
-    width: 50px;
-}
-.rem {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: row;
-}
-.btnLogin {
+
+.btnSign {
     background-color: rgba(71, 50, 24, 0.275);
     margin-top: 50px;
     font-size: 19px;
