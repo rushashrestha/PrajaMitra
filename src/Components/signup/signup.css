@@ -1,28 +1,24 @@
 .signup {
-    margin-top: 100px;
     z-index: -1;
     margin-top: 0px;
     background-image: url(../../images/nepal.jpg);
     display: flex;
-
     background-size: cover;
     background-repeat: none;
-
     z-index: -1;
     height: 684px;
 }
 
 .signinDet {
-    margin-top: 90px;
+    margin-top: 50px;
     margin-left: 190px;
     background-color: rgba(165, 170, 170, 0.674);
-    padding: 80px;
+    padding: 60px;
     border-radius: 90px;
-    height: 400px;
+    height: 460px;
     width: 400px;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .signinDet input {
@@ -44,6 +40,21 @@
     width: 400px;
 }
 
+.dob{
+    text-align: left;
+    font-weight: 800px;
+
+}
+
+.gender{
+    gap: 5px;
+    display: flex;
+
+}
+.gender input{
+    width: 20px;
+    margin-right: 5px;
+}
 input::placeholder {
     font-size: 14px;
     color: rgb(0, 0, 0);
@@ -56,4 +67,5 @@ input::placeholder {
     margin-top: 50px;
     font-size: 19px;
     width: 120px;
+margin-left: 20vh;
 }

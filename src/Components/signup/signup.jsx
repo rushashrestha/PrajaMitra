@@ -10,8 +10,30 @@ export default function Signup() {
         <input type="text" placeholder='Last Name' />
         </div> 
 <br />
-<label htmlFor="dob" style={{marginLeft:'0px',alignItems:"right"}}>Date of Birth</label>
-<input type="date" name="" id="" /><br />
+<label htmlFor="dob" className='dob' >Date of Birth</label>
+<input type="date" name="dob" id="dob" /><br />
+<div className="gender">
+<label htmlFor="gnder">Gender:</label>
+<input
+                  type="radio"
+                  id="male"
+                  name="gender"
+                  value="Male"
+                  
+                  required
+                />
+                <label htmlFor="male">Male</label>
+
+                 <input
+                  type="radio"
+                  id="female"
+                  name="gender"
+                  value="Female"
+      
+                  required
+                />
+                <label htmlFor="female">Female</label> 
+</div><br />
         <input type="text" name="email" id="email" placeholder='Email' />
         <br />
         
@@ -21,7 +43,7 @@ export default function Signup() {
         <p>Please enter your detail accordingly to your citizenship!!</p>
         <button className='btnSign' >Sign Up</button>
         <br />
-        <p>Already have an account? <Link to='/login'>Login</Link></p>
+        <p style={{marginLeft:'100px'}}>Already have an account? <Link to='/login'>Login</Link></p>
         </div>
         <div className="img"></div>
         </div>
