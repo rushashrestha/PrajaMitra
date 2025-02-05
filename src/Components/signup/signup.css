@@ -1,0 +1,59 @@
+.signup {
+    margin-top: 100px;
+    z-index: -1;
+    margin-top: 0px;
+    background-image: url(../../images/nepal.jpg);
+    display: flex;
+
+    background-size: cover;
+    background-repeat: none;
+
+    z-index: -1;
+    height: 684px;
+}
+
+.signinDet {
+    margin-top: 90px;
+    margin-left: 190px;
+    background-color: rgba(165, 170, 170, 0.674);
+    padding: 80px;
+    border-radius: 90px;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signinDet input {
+    font-size: 15px;
+    background-color: rgba(55, 16, 16, 0.275);
+    padding: 5px;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: 5px solid black;
+    border-radius: 50px;
+    height: 20px;
+    width: 390px;
+}
+
+.signinDet .name {
+    display: flex;
+    gap: 5px;
+    width: 400px;
+}
+
+input::placeholder {
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    opacity: 1;
+    /* Ensures the placeholder is fully visible */
+}
+
+.btnSign {
+    background-color: rgba(71, 50, 24, 0.275);
+    margin-top: 50px;
+    font-size: 19px;
+    width: 120px;
+}
