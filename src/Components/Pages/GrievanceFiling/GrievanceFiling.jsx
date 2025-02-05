@@ -1,10 +1,13 @@
 import React from "react";
-
+import './Grievance.css'
 const GrievanceFiling = () => {
   return (
-    <div>
-      <h1>Bill Payment</h1>
-      <p>Here you can pay your bills. Please choose the bill you want to pay.</p>
+    <div className="grievanceFiling">
+      <h3>Grievance Filing Form</h3>
+      <form action="">
+        <label htmlFor="gName">Name(first name, middle name and last name):</label>
+        <input type="text" name="gName" id="gName" placeholder="Please enter your full name"/>
+      </form>
       {/* Add your bill payment functionality here */}
     </div>
   );
