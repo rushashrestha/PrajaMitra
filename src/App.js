@@ -9,6 +9,7 @@ import Signup from "./Components/signup/signup";
 import BillPayment from "./Components/Pages/BillPayment/BillPayment";
 import CertificteIssuance from "./Components/Pages/CertificateIssuance/CertificateIssuance";
 import GrievanceFiling from "./Components/Pages/GrievanceFiling/GrievanceFiling";
+import Hero from "./Components/Hero/Hero";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/hero" element={<Hero/>}/>
         <Route path="/signup" element={<Signup />} />
         <Route path="/grievance-filing" element={<GrievanceFiling/>} />
         <Route path="/certificate-issuance" element={<CertificteIssuance/>} />
