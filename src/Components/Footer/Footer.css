@@ -32,11 +32,10 @@
     color: #252525;
     font-size: 20px;
     font-family: "Playfair Display";
-    flex-wrap: wrap; /* Allow links to wrap on smaller screens */
-    justify-content: center; /* Center-align links */
-    padding: 0; /* Remove default padding */
-}
-
+    flex-wrap: wrap; 
+    justify-content: center; 
+    padding: 0; 
+  }
 .footer-links li {
     cursor: pointer;
 }
@@ -61,7 +60,7 @@
 .name-list {
     display: flex;
     gap: 2px;
-    align-items: center; /* Align GitHub icons with names */
+    align-items: center;
 }
 
   .footer-copyright {
@@ -116,10 +115,9 @@
   }
 }
 
-/* Mobile view (768px and below) */
 @media (max-width: 768px) {
   .footer-links {
-    flex-direction: column; /* Stack links vertically */
+    flex-direction: column; 
     gap: 15px;
   }
 
@@ -140,7 +138,6 @@
   }
 }
 
-/* Small mobile devices (480px and below) */
 @media (max-width: 480px) {
   .footer {
     padding: 20px 0;

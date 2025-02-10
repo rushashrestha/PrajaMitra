@@ -16,7 +16,7 @@
   flex-direction: column;
   justify-content: center;
   max-width: 60%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better text readability */
+  background: rgba(0, 0, 0, 0.5); 
   padding: 20px;
   border-radius: 8px;
 }
@@ -29,9 +29,8 @@
   color: #ffffff;
 }
 
-/* ============ Responsive Design ============ */
 
-/* For tablets */
+
 @media (max-width: 1024px) {
   .heropara {
     max-width: 80%;
@@ -41,7 +40,7 @@
   }
 }
 
-/* For mobile phones */
+
 @media (max-width: 768px) {
   .hero {
     padding: 0 10px;
@@ -55,7 +54,6 @@
   }
 }
 
-/* For smaller mobile devices */
 @media (max-width: 480px) {
   .heropara p {
     font-size: 24px;

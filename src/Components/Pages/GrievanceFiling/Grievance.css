@@ -38,7 +38,21 @@
     width: 180px;
     align-items: center;
 }
+.applicationContainer {
+    text-align: left;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
 
+  .applicationContainer p:last-of-type {
+    font-weight: bold;
+    font-size: 18px;
+    color: blue;
+    text-align: center;
+  }
+  
 @media (max-width: 1024px) {
     .grievanceFiling {
         margin: 50px;

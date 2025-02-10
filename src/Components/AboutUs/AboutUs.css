@@ -3,8 +3,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap');
 #about {
-    scroll-margin-top: 100px; /* Prevent overlap with the navbar */
-    min-height: 100vh; /* Ensure visibility */
+    scroll-margin-top: 100px; 
+    min-height: 100vh; 
     padding: 20px 0;
     background-color: #f0f0f0;
     text-align: center;
@@ -109,7 +109,7 @@
   }
 }
 
-/* For mobile devices */
+
 @media (max-width: 768px) {
   .about-section {
     height: 30vh;
@@ -142,12 +142,12 @@
   }
 }
 
-/* For small mobile devices */
+
 @media (max-width: 480px) {
   .about-section {
     height: auto;
     padding: 10px;
-    box-shadow: none; /* Reduce shadow for cleaner look */
+    box-shadow: none; 
   }
 
   .about-section h2 {

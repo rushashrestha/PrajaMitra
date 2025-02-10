@@ -1,30 +1,94 @@
-import React from "react";
-import './Grievance.css'
+import React, { useState } from "react";
+import './Grievance.css';
+
 const GrievanceFiling = () => {
+  const [formData, setFormData] = useState({
+    gName: "",
+    nationality: "",
+    gender: "",
+    age: "",
+    mailingAddress: "",
+    gEmail: "",
+    issues: "",
+    brief: "",
+    resolution: "",
+    submitted: false,
+    applicationNumber: "",
+    status: "Pending"
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFormData({
+      ...formData,
+      submitted: true,
+      applicationNumber: Math.floor(100000 + Math.random() * 900000), 
+    });
+  };
+
   return (
     <div className="grievanceFiling">
-      <h3 style={{textAlign:'center'}}>Grievance Filing Form</h3>
-      <form action="">
-      <div className="form">        
-        <label htmlFor="gName">Name(first name, middle name and last name):<input type="text" name="gName" id="gName" /></label>
-        
-        <div className="rga">
-        <label htmlFor="Nationality">Nationality: <input id="race" type="text" /></label>
-        <label htmlFor="Gender">Gender: <input type="text" id="gGender" /></label>
-        <label htmlFor="Age">Age: <input type="number" id="age"/></label>
+      {!formData.submitted ? (
+        <form onSubmit={handleSubmit}>
+          <h3 style={{ textAlign: 'center' }}>Grievance Filing Form</h3>
+          <div className="form">
+            <label>Name (First, Middle, Last):</label>
+            <input type="text" name="gName" value={formData.gName} onChange={handleChange} required />
+
+            <div className="rga">
+              <label>Nationality:</label>
+              <input type="text" name="nationality" value={formData.nationality} onChange={handleChange} required />
+
+              <label>Gender:</label>
+              <input type="text" name="gender" value={formData.gender} onChange={handleChange} required />
+
+              <label>Age:</label>
+              <input type="number" name="age" value={formData.age} onChange={handleChange} required />
+            </div>
+
+            <label>Mailing Address (Include Postal Code):</label>
+            <input type="text" name="mailingAddress" value={formData.mailingAddress} onChange={handleChange} required />
+
+            <label>Email Address:</label>
+            <input type="email" name="gEmail" value={formData.gEmail} onChange={handleChange} required />
+
+            <label>Grievable Issue:</label>
+            <input type="text" name="issues" value={formData.issues} onChange={handleChange} required />
+
+            <label>Brief Statement of Issues and Facts:</label>
+            <textarea name="brief" value={formData.brief} onChange={handleChange} required rows={9}></textarea>
+
+            <label>Desired Relief or Resolution:</label>
+            <textarea name="resolution" value={formData.resolution} onChange={handleChange} required rows={9}></textarea>
+
+            <button type="submit" className="btnSubmit">Submit</button>
+          </div>
+        </form>
+      ) : (
+        <div className="applicationContainer">
+          <h3 style={{ textAlign: 'center' }}>Grievance Application Receipt</h3>
+          <p><strong>Application Number:</strong> {formData.applicationNumber}</p>
+          <p><strong>Name:</strong> {formData.gName}</p>
+          <p><strong>Nationality:</strong> {formData.nationality}</p>
+          <p><strong>Gender:</strong> {formData.gender}</p>
+          <p><strong>Age:</strong> {formData.age}</p>
+          <p><strong>Mailing Address:</strong> {formData.mailingAddress}</p>
+          <p><strong>Email:</strong> {formData.gEmail}</p>
+          <p><strong>Grievable Issue:</strong> {formData.issues}</p>
+          <p><strong>Brief Statement:</strong> {formData.brief}</p>
+          <p><strong>Desired Resolution:</strong> {formData.resolution}</p>
+          
+          <p style={{ fontWeight: "bold", color: "blue", textAlign: "center", fontSize: "18px" }}>
+            Application Status: {formData.status}
+          </p>
+
+          <p style={{ textAlign: "center" }}>Your grievance has been recorded. You will receive further updates via email.</p>
         </div>
-        
-        <label htmlFor="MailingAddress">Mailing Address(include postal code): <input type="text" id="mailingAddress"/></label>
-        <label htmlFor="gEmail">Email address: <input type="text" /></label>
-
-        <label htmlFor="issues">Grievable Issue: <input type="text" id="issues" /></label>
-
-        <label htmlFor="breif">Brief statement of issues and facts on which grievance is based: </label><textarea name="brief" id="breif"></textarea> 
-        <label htmlFor="resolution">Desired Relief or Resolution:</label>
-        <textarea name="resolution" id="resolution"></textarea>
-        <button className="btnSubmit">Submit</button>
-      </div>
-      </form>
+      )}
     </div>
   );
 };
