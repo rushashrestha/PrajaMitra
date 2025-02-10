@@ -34,11 +34,11 @@ const AboutUS = () => {
         <p>
           <strong>Grievance Redressal:</strong> File complaints online and track
           their status in real-time. <br />
-          <strong>Certificate Issuance:</strong> Apply for and download
+          <strong>Certificate Issuance:</strong> Apply for
           essential certificates like birth, death, income, and caste
           certificates. <br />
           <strong>Bill Payments:</strong> Pay utility bills such as electricity,
-          water, and land revenue with ease. <br />
+          water, and internet with ease. <br />
           <strong>Transparency:</strong> Real-time tracking and updates ensure
           accountability in service delivery.
         </p>

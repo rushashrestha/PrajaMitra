@@ -1,0 +1,47 @@
+.certificate-container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .certificate-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .certificate-card {
+    width: 250px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  h3 {
+    font-size: 18px;
+    font-family: "Playfair Display";
+    margin-bottom: 15px;
+  }
+  
+  .apply-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-family: "Playfair Display";
+  }
+  
+  .apply-button:hover {
+    background-color: #0056b3;
+  }
+  

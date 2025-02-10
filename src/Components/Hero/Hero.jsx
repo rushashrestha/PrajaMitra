@@ -2,6 +2,7 @@ import React from "react";
 import "./Hero.css";
 
 const Hero = () => {
+  console.log("HERO")
   return (
     <div className="hero">
       <div className="hero-left"></div>

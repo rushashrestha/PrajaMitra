@@ -1,7 +1,8 @@
 import React from "react";
-import Hero from "../../Components/Hero/Hero"; // Correct path
-import Services from "../../Components/Services/Services"; // Correct path
+import Hero from "../../Components/Hero/Hero"; 
+import Services from "../../Components/Services/Services"; 
 import AboutUS from "../AboutUs/AboutUs";
+
 
 const Home = () => {
   console.log("Homeeeeee");
