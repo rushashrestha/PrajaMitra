@@ -1,9 +1,13 @@
 import React, {useState} from 'react'
 import './signup.css'
-import { Link } from 'react-router-dom'
-
+import { useNavigate, Link } from 'react-router-dom'
+import { createUserWithEmailAndPassword } from 'firebase/auth'
+import { auth ,db } from '../../firebase/firebase'
+import { setDoc,doc } from 'firebase/firestore'
 
 export default function Signup() {
+  const navigate = useNavigate(); 
+
   const [formData, setFormData] = useState({
     firstName:"",
     lastName: "",
@@ -46,7 +50,7 @@ export default function Signup() {
     return passwordPattern.test(password);
   };
 
-  const handleSubmit=(e)=>{
+  const handleSubmit= async(e)=>{
     e.preventDefault();
 
     if (!formData.firstName|| !formData.lastName ||!formData.password || !formData.confirmPassword) {
@@ -73,7 +77,23 @@ export default function Signup() {
       alert("Passwords do not match.");
       return;
     }
-    alert(`User Registered Successfully! Welcome, ${formData.firstName} ${formData.lastName}`);
+    try {
+      createUserWithEmailAndPassword( auth, formData.email, formData.password);
+      const user = auth.currentUser;
+      console.log(user);
+      alert("Registration Succesfull");
+      // navigate('/login');
+      if (user) {
+        await setDoc(doc(db, "User" , user.uid),{
+          email:user.email,
+          firstName:formData.firstName,
+          lastName:formData.lastName,
+        })
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
+    // alert(`User Registered Successfully! Welcome, ${formData.firstName} ${formData.lastName}`);
 
     setFormData({
       firstName: "",
@@ -118,7 +138,7 @@ export default function Signup() {
         <button type="submit" className='btnSign' >Sign Up</button>
        </form>
         <br />
-        <p style={{marginLeft:'100px'}}>Already have an account? <Link to='/login'>Login</Link></p>
+        <p style={{marginLeft:'100px'}}>Already have an account? <Link to='/'>Login</Link></p>
         </div>
         </div>
         

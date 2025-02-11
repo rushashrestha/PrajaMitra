@@ -8,8 +8,8 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const handleScroll = (sectionId) => {
-    if (window.location.pathname !== "/") {
-      navigate("/");
+    if (window.location.pathname !== "/Home") {
+      navigate("/Home");
       setTimeout(() => {
         document
           .getElementById(sectionId)
@@ -26,14 +26,14 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-left">
         <img src={logo} alt="Logo" className="logo" />
-        <a href="/" className="navbar-brand">
+        <a href="/Home" className="navbar-brand">
           <h1>प्रजा MITRA</h1>
         </a>
       </div>
       <div className="navbar-right">
         <button onClick={() => handleScroll("services")}>OUR SERVICES</button>
         <button onClick={() => handleScroll("about")}>ABOUT US</button>
-        <Link to="/login">
+        <Link to="/">
           <button>LOGIN</button>
         </Link>
       </div>

@@ -45,7 +45,7 @@ h1 {
 }
 
 /* Button Styles */
-button {
+.navbar-right  button {
   border: none;
   background: #f0f0f0;
   padding: 8px 12px;
@@ -56,7 +56,7 @@ button {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
-button:hover {
+.navbar-right  button:hover {
   background: #ddd;
 }
 

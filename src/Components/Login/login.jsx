@@ -1,6 +1,10 @@
 import React,{useState} from 'react';
 import './login.css';
+//import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate, Link } from 'react-router-dom';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../../firebase/firebase';
+//import { auth } from '../../firebase/firebase';
 
 
 export default function Login() {
@@ -11,7 +15,7 @@ export default function Login() {
     password:"",
   });
 
-  const handleSubmit=(e)=>{
+  const handleSubmit= async(e)=>{
     e.preventDefault();
 
     if (!formData.email || !formData.password) {
@@ -25,10 +29,15 @@ export default function Login() {
       return;
     }
 
-    console.log("Login successful!");
-
+    try {
+      await signInWithEmailAndPassword(auth, formData.email,formData.password);
+      console.log("User logged in successfully!!");
+      navigate("/hero");
+    } catch (error) {
+      console.log(error.message);
+    }
     // Navigate to dashboard or homepage after login
-    navigate('/hero');
+   
   }
   const handleChange = (e) => {
     const { name, value } = e.target;

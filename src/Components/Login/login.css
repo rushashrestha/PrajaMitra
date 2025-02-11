@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    
+
 }
 
 .loginBox {
-    
+
     margin-top: 0px;
     background-image: url(../../images/nepal.jpg);
     display: flex;
@@ -16,12 +16,13 @@
     height: 684px;
 }
 
-.signLink{
+.signLink {
     color: rgb(45, 104, 0);
     text-decoration: underline;
 }
-.signLink:hover{
-  cursor: pointer;
+
+.signLink:hover {
+    cursor: pointer;
 
 }
 
@@ -58,24 +59,40 @@ input::placeholder {
     opacity: 1;
     /* Ensures the placeholder is fully visible */
 }
-.rem input{
+
+.rem input {
     margin-left: 0px;
     width: 50px;
 }
+
 .rem {
     margin-top: 10px;
     display: flex;
     flex-direction: row;
 }
+
 .btnLogin {
     background-color: rgba(71, 50, 24, 0.275);
     margin-top: 50px;
     font-size: 19px;
     width: 120px;
+    background-color: rgba(0, 0, 0, 0.273);
+    margin-top: 50px;
+    font-size: 19px;
+    width: 120px;
+    border: none;
+
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: serif;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
-.btnLogin:hover{
-    background-color: rgba(15, 38, 58, 0.404);
-}
+
+.btnLogin:hover {
+        background: #dddddd63;
+}  
 
 @media (max-width: 1024px) {
     .details {

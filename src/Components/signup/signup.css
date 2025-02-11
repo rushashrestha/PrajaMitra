@@ -3,6 +3,7 @@
     margin-top: 0px;
     background-image: url(../../images/nepal.jpg);
     display: flex;
+    flex-direction: column;
     background-size: cover;
     background-repeat: none;
     z-index: -1;
@@ -40,21 +41,23 @@
     width: 400px;
 }
 
-.dob{
+.dob {
     text-align: left;
     font-weight: 800px;
 
 }
 
-.gender{
+.gender {
     gap: 5px;
     display: flex;
 
 }
-.gender input{
+
+.gender input {
     width: 20px;
     margin-right: 5px;
 }
+
 input::placeholder {
     font-size: 14px;
     color: rgb(0, 0, 0);
@@ -63,13 +66,22 @@ input::placeholder {
 }
 
 .btnSign {
-    background-color: rgba(71, 50, 24, 0.275);
-    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.273);
+    margin-top: 40px;
+    margin-left: 20vh;
     font-size: 19px;
     width: 120px;
-margin-left: 20vh;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: serif;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
-
+.btnSign:hover{
+    background: #dddddd63;
+}
 @media (max-width: 1024px) {
     .signinDet {
         margin-left: 100px;
