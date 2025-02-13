@@ -32,7 +32,7 @@ export default function Login() {
     try {
       await signInWithEmailAndPassword(auth, formData.email,formData.password);
       console.log("User logged in successfully!!");
-      navigate("/hero");
+      navigate("/home");
     } catch (error) {
       console.log(error.message);
     }
