@@ -82,7 +82,7 @@ export default function Signup() {
       const user = auth.currentUser;
       console.log(user);
       alert("Registration Succesfull");
-      // navigate('/login');
+      navigate('/login');
       if (user) {
         await setDoc(doc(db, "User" , user.uid),{
           email:user.email,
@@ -138,7 +138,7 @@ export default function Signup() {
         <button type="submit" className='btnSign' >Sign Up</button>
        </form>
         <br />
-        <p style={{marginLeft:'100px'}}>Already have an account? <Link to='/'>Login</Link></p>
+        <p style={{marginLeft:'100px'}}>Already have an account? <Link to='/login'>Login</Link></p>
         </div>
         </div>
         
