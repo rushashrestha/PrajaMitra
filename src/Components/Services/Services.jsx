@@ -12,7 +12,7 @@ const Services = () => {
       const user = auth.currentUser; // Get the current logged-in user
 
       if (!user) {
-        alert("No user is logged in. Please log in first.");
+        navigate("/login");
         return;
       }
 
