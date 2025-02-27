@@ -1,49 +1,103 @@
 .certificate-container {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    padding-bottom: 215px;
-    padding-top: 20px;
-  }
-  
-  h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    font-family: 'Playfair Display', serif;
-  }
-  
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  padding-bottom: 215px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.certificate-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* ✅ Allows wrapping on smaller screens */
+}
+
+.certificate-card {
+  width: 250px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out; /* ✅ Smooth hover effect */
+}
+
+.certificate-card:hover {
+  transform: scale(1.05);
+}
+
+h3 {
+  font-size: 18px;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 15px;
+}
+
+.apply-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  font-family: "Playfair Display", serif;
+}
+
+.apply-button:hover {
+  background-color: #0056b3;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
   .certificate-options {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center;
   }
-  
+
   .certificate-card {
-    width: 250px;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    width: 80%; /* Expand width for better use of space */
+    max-width: 300px;
   }
-  
+
+  h2 {
+    font-size: 20px;
+  }
+
   h3 {
-    font-size: 18px;
-    font-family: "Playfair Display";
-    margin-bottom: 15px;
+    font-size: 16px;
   }
-  
+
   .apply-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-    font-family: "Playfair Display";
+    padding: 8px 12px;
+    font-size: 14px;
   }
-  
-  .apply-button:hover {
-    background-color: #0056b3;
+}
+
+@media (max-width: 480px) {
+  .certificate-container {
+    padding-bottom: 150px;
   }
-  
+
+  .certificate-card {
+    width: 90%;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  .apply-button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
