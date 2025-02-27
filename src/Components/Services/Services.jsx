@@ -39,13 +39,13 @@ const Services = () => {
       <h2 className="services-title">OUR SERVICES</h2>
       <div className="services-grid">
         <div onClick={() => handleServiceNavigation("grievance")} className="service-card">
-          <h3>GRIEVANCE FILING</h3>
+          <h3>Grievance Filing</h3>
         </div>
         <div onClick={() => handleServiceNavigation("certificate")} className="service-card">
-          <h3>CERTIFICATE ISSUANCE</h3>
+          <h3>Certificate Issuance</h3>
         </div>
         <div onClick={() => handleServiceNavigation("bill")} className="service-card">          
-          <h3>BILL PAYMENTS</h3>          
+          <h3>Bill Payment</h3>          
         </div>
       </div>
     </div>

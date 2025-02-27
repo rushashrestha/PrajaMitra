@@ -35,9 +35,11 @@
   }
 
   .service-card h3{
-    font-weight: bold;
+    font-weight: bolder;
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.5); 
+    border-radius: 5px;
   }
 
   .service-card :link{
@@ -46,28 +48,29 @@
   }
 
   .service-card:nth-child(1) {
-    background: url("../../images/road.webp") no-repeat center center/cover;
-    color: white; /* Ensures text is readable on the image */
+    background: url("../../images/griviance-img.png") no-repeat center center/cover;
+    color: white; 
     font-family: 'Life Savers', cursive;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
   
   .service-card:nth-child(2){
-    background: url("../../images/kathmandu-city.webp") no-repeat center center/cover;
-    color: white; /* Ensures text is readable on the image */
+    background: url("../../images/certificate-image.png") no-repeat center center/cover;
+    color: white; 
     font-family: 'Life Savers', cursive;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
 
   .service-card:nth-child(3){
-    background: url("../../images/road.webp") no-repeat center center/cover;
-    color: white; /* Ensures text is readable on the image */
+    background: url("../../images/bill-image.png") no-repeat center center/cover;
+    color: white; 
     font-family: 'Life Savers', cursive;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
 
   .service-card:hover {
     transform: scale(1.05);
+    cursor: pointer;
   }
 
 
