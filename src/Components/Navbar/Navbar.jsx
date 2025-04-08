@@ -1,14 +1,23 @@
 import logo from "../../images/gov.png";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom"; 
 import "./Navbar.css";
-import { signOut } from "firebase/auth";
+import { signOut, onAuthStateChanged } from "firebase/auth";
 import { auth } from "../../firebase/firebase";
 
 const Navbar = () => {
-  const user = auth.currentUser;
+  const [user, setUser] = useState(null);
+  const [loading , setLoading] = useState(true);
   const navigate = useNavigate();
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
+
+    return () => unsubscribe();
+  }, []);
 
   const handleScroll = (sectionId) => {
     if (window.location.pathname !== "/") {
@@ -47,9 +56,10 @@ const Navbar = () => {
         <button onClick={() => handleScroll("services")}>OUR SERVICES</button>
         <button onClick={() => handleScroll("about")}>ABOUT US</button>
         <Link to="/login">
-        {!user && <button>LOGIN</button>}
+        
+        {!loading && !user && <button>LOGIN</button>}
         </Link>
-       {user && <button onClick={handleLogout}>LOGOUT</button>}
+       {!loading && user && <button onClick={handleLogout}>LOGOUT</button>}
       </div>
     </nav>
   );
