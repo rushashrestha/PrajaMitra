@@ -6,9 +6,15 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../firebase/firebase';
 //import { auth } from '../../firebase/firebase';
 
+const users =[
+  {email:"shrestharusu5@gmail.com",role:"admin"},
+
+]
+
 
 export default function Login() {
   const navigate = useNavigate(); // For redirecting after login
+
 
   const [formData,setFormData] =useState({
     email:"",
@@ -32,9 +38,16 @@ export default function Login() {
     try {
       await signInWithEmailAndPassword(auth, formData.email,formData.password);
       console.log("User logged in successfully!!");
+  const user= users.find((u)=>u.email === formData.email);
+  if(user){
+    if(user?.role === "admin"){
+      alert("Welcome admin..");
+    }
+  };
       navigate("/");
     } catch (error) {
       console.log(error.message);
+      alert("Log in failed. Check your credentials");
     }
     // Navigate to dashboard or homepage after login
    
