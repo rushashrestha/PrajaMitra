@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./FormDisplay.css";
-
+import jsPDF from "jspdf";
 const FormDisplay = ({ isCitizenship }) => {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -26,6 +26,42 @@ const FormDisplay = ({ isCitizenship }) => {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const downloadPDF = () => {
+    const doc = new jsPDF();
+
+    doc.setFontSize(16);
+    doc.text("Application Receipt", 20, 20);
+
+    let y = 30;
+    const lineHeight = 10;
+
+    const fields = [
+      ["Application Number", formData.appNumber],
+      ["Full Name", `${formData.firstName} ${formData.lastName}`],
+      ["Date of Birth", formData.dob],
+      ["Father’s Name", formData.fatherName],
+      ["Father's Citizenship No.", formData.dadCitizenship],
+      ["Mother’s Name", formData.motherName],
+      ["Mother's Citizenship No.", formData.momCitizenship],
+      ["Address", formData.address],
+      ["Date of Registration", formData.regDate],
+      ["Visit Date", formData.visitDate],
+    ];
+
+    fields.forEach(([label, value]) => {
+      doc.text(`${label}: ${value}`, 20, y);
+      y += lineHeight;
+    });
+
+    doc.text(
+      "The hard copy of this application must be submitted to the nearest office on the visit date.",
+      20,
+      y + 10
+    );
+
+    doc.save("Application_Receipt.pdf");
   };
 
   const handlePhotoUpload = (e) => {
@@ -94,8 +130,8 @@ const FormDisplay = ({ isCitizenship }) => {
       newErrors.motherName = "Mother's name is required";
 
     if (isCitizenship) {
-      if (!formData.citizenship || isNaN(formData.citizenship))
-        newErrors.citizenship = "Citizenship number must be numeric";
+      // if (!formData.citizenship || isNaN(formData.citizenship))
+      //   newErrors.citizenship = "Citizenship number must be numeric";
       if (!formData.photo) newErrors.photo = "Photo upload is required";
     }
 
@@ -237,7 +273,7 @@ const FormDisplay = ({ isCitizenship }) => {
             </p>
             <p>
               <strong>Father's Citizenship No.:</strong>{" "}
-              {formData.dadCitizenship} 
+              {formData.dadCitizenship}
             </p>
             <p>
               <strong>Mother’s Name:</strong> {formData.motherName}
@@ -259,6 +295,9 @@ const FormDisplay = ({ isCitizenship }) => {
               The hard copy of this application must be submitted to the nearest
               office on the visit date.
             </p>
+            <button className="submit-btn" onClick={downloadPDF}>
+              Download Application
+            </button>
           </div>
         )}
       </div>
