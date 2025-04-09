@@ -84,12 +84,19 @@ export default function Signup() {
       alert("Registration Succesfull");
       navigate('/login');
       if (user) {
-        await setDoc(doc(db, "User" , user.uid),{
-          email:user.email,
-          firstName:formData.firstName,
-          lastName:formData.lastName,
-        })
-      }
+    const deviceInfo = {
+      userAgent: navigator.userAgent,
+      timestamp: new Date().toISOString(),
+    };
+
+    await setDoc(doc(db, "User", user.uid), {
+      email: user.email,
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      devices: [deviceInfo], // 👈 saves device info as an array
+    });
+  }
+
     } catch (error) {
       console.log(error.message);
     }
