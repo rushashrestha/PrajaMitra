@@ -24,6 +24,9 @@
     width: 800px;
     border-bottom: 1px solid black;
 }
+.form textarea{
+    font-size: 19px;
+}
 .rga input{
      width: 250px;
 }

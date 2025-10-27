@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import './Grievance.css';
+import { db } from "../../../firebase/firebase";
+import { collection, addDoc } from "firebase/firestore";
 
 const GrievanceFiling = () => {
   const [formData, setFormData] = useState({
@@ -21,13 +23,39 @@ const GrievanceFiling = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setFormData({
-      ...formData,
-      submitted: true,
-      applicationNumber: Math.floor(100000 + Math.random() * 900000), 
-    });
+    const applicationNumber =Math.floor(100000 + Math.random()*900000).toString();
+    
+    const dataToSave = {
+      gName: formData.gName,
+      nationality: formData.nationality,
+      gender: formData.gender,
+      age: formData.age,
+      mailingAddress: formData.mailingAddress,
+      gEmail: formData.gEmail,
+      issues: formData.issues,
+      brief:formData.brief,
+      resolution: formData.resolution,
+      applicationNumber,
+      status:"pending",
+      submittedAt: new Date()
+    }
+
+    try {
+      await addDoc(collection(db,"grievances"),dataToSave);
+
+      setFormData({
+        ...formData,
+        submitted:true,
+        applicationNumber
+      });
+
+      console.log("Grievance successfully submitted to Firestore!")
+    } catch (error) {
+       console.error("Error saving grievance:", error);
+      alert("Submission failed. Please try again.");
+    }
   };
 
   return (
@@ -65,7 +93,7 @@ const GrievanceFiling = () => {
             <label>Desired Relief or Resolution:</label>
             <textarea name="resolution" value={formData.resolution} onChange={handleChange} required rows={9}></textarea>
 
-            <button type="submit" className="btnSubmit">Submit</button>
+            <button type="submit" className="btnSubmit" >Submit</button>
           </div>
         </form>
       ) : (
